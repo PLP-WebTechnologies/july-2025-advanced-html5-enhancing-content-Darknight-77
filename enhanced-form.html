@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Using HTML5</title>
+</head>
+<body>
+
+    <section>
+        <h1>Usign HTML5 To: Make Lists, Tables, & Embed media contents</h1>
+
+        <h2>
+            1. Creating a Table
+        </h2>
+        <ul>
+            <li>
+                Fruits
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Orange</li>
+                </ul>
+            </li>
+            <li>
+                Vegetables
+                <ul>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                    <li>Spinach</li>
+                </ul>
+            </li>
+            <li>
+                Grains
+                <ul>
+                    <li>Rice</li>
+                    <li>Wheat</li>
+                    <li>Oats</li>
+                </ul>
+            </li>
+            <li>
+                Dairy
+                <ul>
+                    <li>Milk</li>
+                    <li>Cheese</li>
+                    <li>Yogurt</li>
+                </ul>
+            </li>
+            <li>
+                Proteins
+                <ul>
+                    <li>Chicken</li>
+                    <li>Fish</li>
+                    <li>Beans</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>
+            2. Creating a Table
+        </h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Apple</td>
+                    <td>Fruit</td>
+                    <td>$1.00</td>
+                </tr>
+                <tr>
+                    <td>Carrot</td>
+                    <td>Vegetable</td>
+                    <td>$0.50</td>
+                </tr>
+                <tr>
+                    <td>Rice</td>
+                    <td>Grain</td>
+                    <td>$2.00</td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>Dairy</td>
+                    <td>$1.50</td>
+                </tr>
+                <tr>
+                    <td>Chicken</td>
+                    <td>Protein</td>
+                    <td>$5.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>
+            3. Embedding Media Content
+        </h2>
+        <h3>Embedding an Image</h3>
+        <figure>
+            <img src="https://powerlearnprojectafrica.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMumbi.a53d431e.png&w=2048&q=75" alt="The Executive Director of Power Learn Project Africa, Mumbi Mwangi" width="300">
+            <figcaption>The Executive Director of Power Learn Project Africa, Mumbi Mwangi</figcaption>
+        </figure>
+
+        <h3>Embedding a Video</h3>
+        <video controls width="400">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Embedding an Audio</h3>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Creating Forms</h2>
+        <h3>Simple personal details form</h3>
+        <h4>* fields are compulsory</h4>
+        <form action="#" method="post">
+            <label for="name">Name:*</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:*</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:*</label>
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required><br><br>
+
+            <label for="dob">Date of Birth:*</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="quantity">Quantity (1-10):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website"><br><br>
+
+            <input type="hidden" name="ip_address" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </section>
+    
+</body>
+</html>
